@@ -1,3 +1,15 @@
 root
+toor
+raspberry
+dietpi
+test
+uploader
 admin
+marketing
+12345678
+qwerty
+webadmin
 password
+Passw@rd
+techsupport
+awsec2
