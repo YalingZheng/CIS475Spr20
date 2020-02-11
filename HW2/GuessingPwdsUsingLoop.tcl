@@ -1,4 +1,4 @@
-#!/user/bin/expect -f
+#!/usr/bin/expect -f
 set NUM 0
 while { $NUM < 780 } {
   spawn su root
