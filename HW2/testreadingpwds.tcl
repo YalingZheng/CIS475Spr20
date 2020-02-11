@@ -1,4 +1,4 @@
-#!/user/bin/expect -f
+#!/usr/bin/expect -f
 set fd "possiblepwds.txt"
 set fp [open "$fd" r]
 set data [read $fp]
