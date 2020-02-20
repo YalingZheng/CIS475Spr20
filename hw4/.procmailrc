@@ -1,0 +1,51 @@
+## Sample .procmailrc for your HW4
+HELL=/bin/sh
+PATH=/usr/lib/mh:$PATH
+## specify the Mail directory
+MAILDIR=$HOME/Mail
+## specify the logfile
+LOGFILE=$HOME/Mail/logfile
+## specify the location of sendmail
+SENDMAIL=/usr/sbin/sendmail
+VERBOSE=0
+EOL="
+"
+LOG="$EOL$EOL$EOL"
+LOG="New message log:$EOL"
+## GET_MESSAGE_INDEX read
+## the integer index from index.txt
+## and increase it by 1
+LOG=`perl $HOME/GET_MESSAGE_INDEX`
+LOG="$EOL"
+
+
+## Recipe_1
+## all emails send from myself to selfMail
+## to test this one, touch Mail/selfMail
+## from your home directory
+:0 H:
+* ^From.*y\.zheng65
+selfMail
+
+## Recipe_2
+## all emails with topic including "news"
+## will go into newsMail
+:0 H:
+* ^Subject.*news
+newsMail
+
+## Recipe_3
+## This recipe will only be invoked if
+## the body contains the string
+## 'Amazing'
+## and it will goes to junkMail
+:0 B:
+*(Amazing)
+junkMail
+
+## Recipe_4
+## all others email message, it will redirect
+## to your regular email account all messages
+:0 :
+* ^To:.*
+! y.zheng65@csuohio.edu
