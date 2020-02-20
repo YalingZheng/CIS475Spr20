@@ -1,0 +1,207 @@
+From root@ip-172-31-57-46.ec2.internal  Thu Feb 20 08:33:16 2020
+Return-Path: <root@ip-172-31-57-46.ec2.internal>
+X-Original-To: y.zheng65
+Delivered-To: y.zheng65@ip-172-31-57-46.ec2.internal
+Received: by ip-172-31-57-46.ec2.internal (Postfix, from userid 0)
+	id 95C3B85DFB4; Thu, 20 Feb 2020 08:33:16 +0000 (UTC)
+Date: Thu, 20 Feb 2020 08:33:16 +0000
+To: y.zheng65@ip-172-31-57-46.ec2.internal
+Subject: Send from root - Email 1
+User-Agent: Heirloom mailx 12.5 7/5/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+Message-Id: <20200220083316.95C3B85DFB4@ip-172-31-57-46.ec2.internal>
+From: root@ip-172-31-57-46.ec2.internal (root)
+Status: RO
+
+=
+
+From root@ip-172-31-57-46.ec2.internal  Thu Feb 20 08:34:04 2020
+Return-Path: <root@ip-172-31-57-46.ec2.internal>
+X-Original-To: y.zheng65
+Delivered-To: y.zheng65@ip-172-31-57-46.ec2.internal
+Received: by ip-172-31-57-46.ec2.internal (Postfix, from userid 0)
+	id E2A4C85DFB4; Thu, 20 Feb 2020 08:34:04 +0000 (UTC)
+Date: Thu, 20 Feb 2020 08:34:04 +0000
+To: walec@ip-172-31-57-46.ec2.internal,
+	y.zheng65@ip-172-31-57-46.ec2.internal
+Subject: Send to two users y.zheng65 and walec 
+User-Agent: Heirloom mailx 12.5 7/5/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+Message-Id: <20200220083404.E2A4C85DFB4@ip-172-31-57-46.ec2.internal>
+From: root@ip-172-31-57-46.ec2.internal (root)
+Status: RO
+
+=
+
+From root@ip-172-31-57-46.ec2.internal  Thu Feb 20 09:21:03 2020
+Return-Path: <root@ip-172-31-57-46.ec2.internal>
+X-Original-To: y.zheng65
+Delivered-To: y.zheng65@ip-172-31-57-46.ec2.internal
+Received: by ip-172-31-57-46.ec2.internal (Postfix, from userid 0)
+	id 9E38D86CB4F; Thu, 20 Feb 2020 09:21:03 +0000 (UTC)
+Date: Thu, 20 Feb 2020 09:21:03 +0000
+To: y.zheng65@ip-172-31-57-46.ec2.internal
+Subject: Email with base64 attachment
+User-Agent: Heirloom mailx 12.5 7/5/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-Id: <20200220092103.9E38D86CB4F@ip-172-31-57-46.ec2.internal>
+From: root@ip-172-31-57-46.ec2.internal (root)
+Status: RO
+
+begin-base64 644 output_attachment.txt
+dGhpcyBpcyBhbiBpbnB1dCBhdHRhY2htZW50IHRleHQgZmlsZS4gCgpUSEUg
+RU5ELgo=
+====
+
+From walec@ip-172-31-57-46.ec2.internal  Thu Feb 20 13:12:36 2020
+Return-Path: <walec@ip-172-31-57-46.ec2.internal>
+X-Original-To: y.zheng65
+Delivered-To: y.zheng65@ip-172-31-57-46.ec2.internal
+Received: by ip-172-31-57-46.ec2.internal (Postfix, from userid 1047)
+	id 1D0F586CB46; Thu, 20 Feb 2020 13:12:36 +0000 (UTC)
+Date: Thu, 20 Feb 2020 13:12:36 +0000
+To: y.zheng65@ip-172-31-57-46.ec2.internal
+Subject: Email with body and base64 encoded message
+User-Agent: Heirloom mailx 12.5 7/5/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-Id: <20200220131236.1D0F586CB46@ip-172-31-57-46.ec2.internal>
+From: walec@ip-172-31-57-46.ec2.internal
+
+begin 664 output_attachment.txt
+M5&AI<R!I<R!T:&4@:6YP=70@871T86-H;65N="X*5&AI<R!I<R!T:&4@:6YP
+M=70@871T86-H;65N="X*5&AI<R!I<R!T:&4@:6YP=70@871T86-H;65N="X@
+M"E1H92!E;F0N"G1H92!E;F0N"G1H92!E;F0N"FEM<&]R=&%N="!T:&EN9W,@
+M<V%Y<R!T:')E92!T:6UE<RX*26UP;W)T86YT('1H:6YG<R!S87D@=&AR964@
+I=&EM97,N"DEM<&]R=&%N="!T:&EN9W,@<V%Y('1H<F5E('1I;65S+@H`
+`
+end
+
+From walec@ip-172-31-57-46.ec2.internal  Thu Feb 20 13:13:09 2020
+Return-Path: <walec@ip-172-31-57-46.ec2.internal>
+X-Original-To: y.zheng65
+Delivered-To: y.zheng65@ip-172-31-57-46.ec2.internal
+Received: by ip-172-31-57-46.ec2.internal (Postfix, from userid 1047)
+	id 7D88086CB46; Thu, 20 Feb 2020 13:13:09 +0000 (UTC)
+Date: Thu, 20 Feb 2020 13:13:09 +0000
+To: y.zheng65@ip-172-31-57-46.ec2.internal
+Subject: This is the REAL Email with body and REAL base64 encoded message
+User-Agent: Heirloom mailx 12.5 7/5/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-Id: <20200220131309.7D88086CB46@ip-172-31-57-46.ec2.internal>
+From: walec@ip-172-31-57-46.ec2.internal
+
+begin-base64 664 output_attachment.txt
+VGhpcyBpcyB0aGUgaW5wdXQgYXR0YWNobWVudC4KVGhpcyBpcyB0aGUgaW5w
+dXQgYXR0YWNobWVudC4KVGhpcyBpcyB0aGUgaW5wdXQgYXR0YWNobWVudC4g
+ClRoZSBlbmQuCnRoZSBlbmQuCnRoZSBlbmQuCmltcG9ydGFudCB0aGluZ3Mg
+c2F5cyB0aHJlZSB0aW1lcy4KSW1wb3J0YW50IHRoaW5ncyBzYXkgdGhyZWUg
+dGltZXMuCkltcG9ydGFudCB0aGluZ3Mgc2F5IHRocmVlIHRpbWVzLgo=
+====
+
+From zyiyuan@ip-172-31-57-46.ec2.internal  Thu Feb 20 13:19:32 2020
+Return-Path: <zyiyuan@ip-172-31-57-46.ec2.internal>
+X-Original-To: y.zheng65
+Delivered-To: y.zheng65@ip-172-31-57-46.ec2.internal
+Received: by ip-172-31-57-46.ec2.internal (Postfix, from userid 1048)
+	id 6B11686CB46; Thu, 20 Feb 2020 13:19:32 +0000 (UTC)
+Date: Thu, 20 Feb 2020 13:19:32 +0000
+To: y.zheng65@ip-172-31-57-46.ec2.internal
+Subject: Play Casino
+User-Agent: Heirloom mailx 12.5 7/5/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-Id: <20200220131932.6B11686CB46@ip-172-31-57-46.ec2.internal>
+From: zyiyuan@ip-172-31-57-46.ec2.internal
+
+Casio 
+play casio, you will win $10,000 dollars. 
+come to claim your winnings. 
+
+From zyiyuan@ip-172-31-57-46.ec2.internal  Thu Feb 20 13:19:46 2020
+Return-Path: <zyiyuan@ip-172-31-57-46.ec2.internal>
+X-Original-To: y.zheng65
+Delivered-To: y.zheng65@ip-172-31-57-46.ec2.internal
+Received: by ip-172-31-57-46.ec2.internal (Postfix, from userid 1048)
+	id 3E97386CB46; Thu, 20 Feb 2020 13:19:46 +0000 (UTC)
+Date: Thu, 20 Feb 2020 13:19:46 +0000
+To: y.zheng65@ip-172-31-57-46.ec2.internal
+Subject: Double your income
+User-Agent: Heirloom mailx 12.5 7/5/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-Id: <20200220131946.3E97386CB46@ip-172-31-57-46.ec2.internal>
+From: zyiyuan@ip-172-31-57-46.ec2.internal
+
+Invest Mastercard stock, 
+Double your income/cash.
+Don't miss the great opportunity!
+
+From ec2-user@ip-172-31-57-46.ec2.internal  Thu Feb 20 13:26:39 2020
+Return-Path: <ec2-user@ip-172-31-57-46.ec2.internal>
+X-Original-To: y.zheng65
+Delivered-To: y.zheng65@ip-172-31-57-46.ec2.internal
+Received: by ip-172-31-57-46.ec2.internal (Postfix, from userid 1000)
+	id 462CB85DFBB; Thu, 20 Feb 2020 13:26:39 +0000 (UTC)
+Date: Thu, 20 Feb 2020 13:26:39 +0000
+To: y.zheng65@ip-172-31-57-46.ec2.internal
+Subject: Foxnews.com latest news Feb 2020
+User-Agent: Heirloom mailx 12.5 7/5/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-Id: <20200220132639.462CB85DFBB@ip-172-31-57-46.ec2.internal>
+From: ec2-user@ip-172-31-57-46.ec2.internal (EC2 Default User)
+
+Ryan Newman walks out of hospital days after horrific Daytona 500 cash
+For Napoli fans, the team is a religion and Maradona is god.
+Messi demands calm after chaotic 2 months from Barcelona
+Virus limits next Tokyo Olympic test event to Japanese-only
+
+From ojohn@ip-172-31-57-46.ec2.internal  Thu Feb 20 13:30:36 2020
+Return-Path: <ojohn@ip-172-31-57-46.ec2.internal>
+X-Original-To: y.zheng65
+Delivered-To: y.zheng65@ip-172-31-57-46.ec2.internal
+Received: by ip-172-31-57-46.ec2.internal (Postfix, from userid 1034)
+	id 5EA4B85DFBB; Thu, 20 Feb 2020 13:30:36 +0000 (UTC)
+Date: Thu, 20 Feb 2020 13:30:36 +0000
+To: y.zheng65@ip-172-31-57-46.ec2.internal
+Subject: First email from ojohn
+User-Agent: Heirloom mailx 12.5 7/5/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-Id: <20200220133036.5EA4B85DFBB@ip-172-31-57-46.ec2.internal>
+From: ojohn@ip-172-31-57-46.ec2.internal
+
+>From ojohn important message 1
+
+From ojohn@ip-172-31-57-46.ec2.internal  Thu Feb 20 13:30:54 2020
+Return-Path: <ojohn@ip-172-31-57-46.ec2.internal>
+X-Original-To: y.zheng65
+Delivered-To: y.zheng65@ip-172-31-57-46.ec2.internal
+Received: by ip-172-31-57-46.ec2.internal (Postfix, from userid 1034)
+	id 09D5285DFBB; Thu, 20 Feb 2020 13:30:54 +0000 (UTC)
+Date: Thu, 20 Feb 2020 13:30:54 +0000
+To: y.zheng65@ip-172-31-57-46.ec2.internal
+Subject: Second email from ojohn
+User-Agent: Heirloom mailx 12.5 7/5/10
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Message-Id: <20200220133054.09D5285DFBB@ip-172-31-57-46.ec2.internal>
+From: ojohn@ip-172-31-57-46.ec2.internal
+
+>From ojohn important message 2
+
