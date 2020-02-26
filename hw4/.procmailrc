@@ -1,5 +1,5 @@
 ## Sample .procmailrc for your HW4
-HELL=/bin/sh
+SHELL=/bin/sh
 PATH=/usr/lib/mh:$PATH
 ## specify the Mail directory
 MAILDIR=$HOME/Mail
