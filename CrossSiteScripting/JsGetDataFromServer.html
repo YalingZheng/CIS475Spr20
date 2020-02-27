@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>REMOTE SCRIPTING WITH AJAX</title>
+<script type="text/javascript">
+	//
+	// 
+	// This code was authored by 
+	// 
+	// Alejandro Gervasio 2005-09-21 
+	// 
+	// The code was posted at www.devarticles/com 
+	//
+	// initialize XMLHttpRequest object 
+	var xmlobj = null;
+	// initialize global variables 
+	var data = new Array();
+	var i = 0;
+
+	// send http request 
+	function sendRequest(doc) {
+		// check for existing requests 
+		if (xmlobj != null && xmlobj.readyState != 0 && xmlobj.readyState != 4) {
+			xmlobj.abort();
+		}
+		try {
+			// instantiate object for Firefox, Nestcape, etc. 
+			xmlobj = new XMLHttpRequest();
+		} catch (e) {
+			try {
+				// instantiate object for Internet Explorer 
+				xmlobj = new ActiveXObject('Microsoft.XMLHTTP');
+			} catch (e) {
+				// Ajax is not supported by the browser 
+				xmlobj = null;
+				return false;
+			}
+		} // assign state handler 
+		xmlobj.onreadystatechange = stateChecker;
+		// open socket connection 
+		xmlobj.open('GET', doc, true);
+		// send request 
+		xmlobj.send(null);
+	}
+
+	// check request status 
+	function stateChecker() {
+		// if request is completed 
+		if (xmlobj.readyState == 4) {
+			// if status == 200 display text file
+			if (xmlobj.status == 200) {
+				// create data container 
+				createDataContainer();
+				// display data into container 
+				data = xmlobj.responseText.split('|');
+				displayData();
+			} else {
+				alert('Failed to get response :' + xmlobj.statusText);
+			}
+		}
+	}
+
+	// create data container 
+	function createDataContainer() {
+		var div = document.createElement('div');
+		div.setAttribute('id', 'container');
+		if (div.style) {
+			div.style.width = '500px';
+			div.style.height = '45px';
+			div.style.padding = '5px';
+			div.style.border = '1px solid #00f';
+			div.style.font = 'bold 11px Tahoma,Arial';
+			div.style.backgroundColor = '#eee';
+			document.getElementsByTagName('body')[0].appendChild(div);
+		}
+	}
+
+	// display data at a given time interval 
+	function displayData() {
+		if (i == data.length) {
+			i = 0;
+		}
+		document.getElementById('container').innerHTML = data[i];
+		i++;
+		//setTimeout(’displayData()’,20*1000); 
+		setTimeout('displayData()', 5 * 1000);
+	}
+
+	// execute program when page is loaded 
+	window.onload = function() {
+		// check if browser is DOM compatible 
+		//alert("it is here");
+		if (document.getElementById && document.getElementsByTagName
+				&& document.createElement) {
+			// load data file 
+			//sendRequest('http://184.72.73.19/cgi-bin/WealthTrackerSimple.cgi');
+			//sendRequest('https://github.com/YalingZheng/CIS475Spr20/blob/master/hw4/testEmails.txt');
+			//sendRequest('http://eecs.csuohio.edu/~yazheng/index.html');
+			sendRequest('technews.txt');
+		}
+	}
+</script>
+</head>
+<body>
+</body>
+</html>
