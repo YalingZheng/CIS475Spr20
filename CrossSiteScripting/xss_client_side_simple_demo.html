@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Client Side XSS Simple Demo</title>
+</head>
+<body>
+<h1>Client Side XSS -- Simple Demo</h1>
+<p><?php echo $_GET['query']; ?>:</p>
+</body>
+</html>
+
+<!-- http://10.0.0.13/~kak/xss_client_side_simple_demo.html/?query=<script>alert(’Do you agree?’);</script> -->
