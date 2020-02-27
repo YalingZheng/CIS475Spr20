@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/DTD/strict.dtd">
+<html>
+<head>
+<title>Cookie Based Wealth Tracker</title>
+<meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<script type="text/javascript">
+//by Avi Kak (kak@purdue.edu) // April 17, 2011 (slightly modified: April 18, 2013)
+function setCookie(name, value, expires, path, domain, secure) {
+    var today = new Date();
+    today.setTime(today.getTime());
+    if (expires) {
+        expires = expires * 1000 * 60 * 60 * 24;
+    }
+    var expires_date = new Date(today.getTime() + (expires));
+    document.cookie = name + "=" + escape(value) + ((expires) ? ";expires=" + expires_date.toGMTString() : "") +
+        ((path) ? ";path=" + path : "") + ((domain) ? ";domain=" + domain : "") + ((secure) ? ";secure" : "");
+}
+
+function getSetCookie(name, info) {
+    var all_cookies = document.cookie.split(';');
+    var cooky = '';
+    var nam = '';
+    var val = '';
+    for (i = 0; i < all_cookies.length; i++) {
+        cooky = all_cookies[i].split('=');
+        nam = cooky[0].replace(/^\s+|\s+$/g, '');
+        if (nam == name) {
+            val = unescape(cooky[1].replace(/^\s+|\s+$/g, ''));
+            val_parts = val.split('_');
+            var howManyVisits = Number(val_parts[0]);
+            var visit_portion = val_parts[1];
+            var prev_info = val_parts[2];
+            if (prev_info) {
+                var diff = info - prev_info;
+                var msg = "This is your visit number " + (howManyVisits + 1) + ". " + "Your wealth changed by " + diff;
+                alert(msg);
+            }
+            var newCookieVal = (howManyVisits + 1) + '_' + visit_portion + '_' + info;
+            setCookie(name, newCookieVal, 15);
+        } else {
+            var cookieValue = "1_visits" + '_' + info;
+            setCookie(name, cookieValue, 15);
+        }
+    }
+}
+
+function deleteCookie(name, path, domain) {
+    if (getCookieValueForName(name)) {
+        document.cookie = name + "=" + ((path) ? "; path=" + path : "") + ((domain) ? "; domain " : "") + "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+    }
+}
+//function load() { // window.status="Checking user authentication"; //}
+function checkEntry() {
+    var body = document.getElementsByTagName("body");
+    var msg = "The information you entered for verification: ";
+    var doc_element = document.createElement("p");
+
+
+    var textnode = document.createTextNode(msg);
+    doc_element.appendChild(textnode);
+    body[0].appendChild(doc_element);
+    var nameEntered = document.forms[0].yourname.value;
+    var wealthEntered = document.forms["ACKentryform"].sizeofwealth.value;
+    createHTML(nameEntered, wealthEntered);
+    getSetCookie(nameEntered, wealthEntered);
+    return false;
+}
+
+function createHTML() {
+    var body = document.getElementsByTagName("body");
+    for (var i = 0; i < arguments.length; i++) {
+        var argtext = arguments[i];
+        var doc_element = document.createElement("p");
+        var newtext = "You entered: " + argtext;
+        var textnode = document.createTextNode(newtext);
+        doc_element.appendChild(textnode);
+        body[0].appendChild(doc_element);
+    }
+}
+</script>
+</head>
+<body>
+	<form id="ACKentryform" action="#" onsubmit="return checkEntry();"
+		method="post">
+		<p>Enter your name and the size of your wealth in this form:</p>
+		<br> <br>
+		<p>
+			Your Name <em>(Required)</em>: <input id="yournamebox"
+				name="yourname" type="text" />
+		</p>
+		<p>
+			Size of Your Wealth: <input id="sizeofwealthbox" name="sizeofwealth"
+				type="text" />
+		</p>
+		<p>
+			<input id="formsubmit" type="submit" />
+		</p>
+	</form>
+</body>
+</html>
